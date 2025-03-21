@@ -18,7 +18,7 @@ Wi-Fi networks primarily use **WEP, WPA, WPA2, and WPA3** encryption protocols:
 
 - **WPA3:** The latest and most secure encryption standard, designed to address WPA2 weaknesses by implementing **Simultaneous Authentication of Equals (SAE)** (also known as the Dragonfly handshake), making it resistant to dictionary attacks. However, due to limited adoption, most networks still run WPA2.
 
-## Examples/Types of Wi-Fi Attacks
+## Types of Wi-Fi Attacks
 Before diving into practical steps, let's briefly discuss common Wi-Fi attack techniques that hackers use:
 
 1. **Deauthentication Attack:** Forces a connected client to disconnect from the Wi-Fi network, capturing the handshake when it reconnects.
